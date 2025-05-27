@@ -68,11 +68,9 @@ bash
 Copy
 Edit
 python main.py
+
 The server will start on:
 
-cpp
-Copy
-Edit
 http://127.0.0.1:5000
 📬 API Endpoints
 Method	Endpoint	Description
@@ -83,8 +81,6 @@ DELETE	/contacts/<id>	Delete a contact by ID
 
 📦 Sample JSON (for POST/PUT)
 json
-Copy
-Edit
 {
   "firstName": "John",
   "lastName": "Doe",
@@ -94,9 +90,6 @@ Edit
 🧪 Testing with Postman
 You can test the API using Postman by sending HTTP requests to:
 
-arduino
-Copy
-Edit
 http://127.0.0.1:5000/contacts
 🙌 Author
 Malinda
@@ -105,9 +98,3 @@ GitHub Profile
 📄 License
 This project is open-source and available under the MIT License.
 
-yaml
-Copy
-Edit
-
-
-Would you like a `requirements.txt` file generated for this project too?
