@@ -36,41 +36,24 @@ Frontend Repo (if available): _[Add link here]_
 ├── models.py # SQLAlchemy models
 ├── requirements.txt # Python dependencies
 
-yaml
-Copy
-Edit
-
----
-
-# ⚙️ Setup Instructions
+## ⚙️ Setup Instructions
 
 # 1. Clone the Repository
-
 git clone https://github.com/malinda6997/Full-Stack-CRUD-Backend.git
 cd Full-Stack-CRUD-Backend
 
 #2. Create a Virtual Environment
-bash
-Copy
-Edit
 python -m venv venv
 source venv/bin/activate       # Linux/Mac
 venv\Scripts\activate          # Windows
 
 #3. Install Dependencies
-bash
-Copy
-Edit
 pip install -r requirements.txt
 
 #4. Run the Application
-bash
-Copy
-Edit
 python main.py
 
 The server will start on:
-
 http://127.0.0.1:5000
 📬 API Endpoints
 Method	Endpoint	Description
@@ -87,10 +70,7 @@ json
   "mobileNumber": "0771234567",
   "age": 25
 }
-🧪 Testing with Postman
-You can test the API using Postman by sending HTTP requests to:
 
-http://127.0.0.1:5000/contacts
 🙌 Author
 Malinda
 GitHub Profile
