@@ -35,6 +35,26 @@ def create_contact():
             jsonify({"message": "An error occurred while creating the contact", "error": str(e)}), 400
         )
     
+@app.route('/contacts/<int:id>', methods=['UPDATE'])
+def update_contact(id):
+    contact = Contact.query.get(id)
+    
+    if not contact:
+        return jsonify({"message": "Contact not found"}), 404
+    
+    data = request.json
+    contact.first_name = data.get('firstName', contact.first_name)
+    contact.last_name = data.get('lastName', contact.last_name)
+    contact.mobile_number = data.get('mobileNumber', contact.mobile_number)
+    contact.age = data.get('age', contact.age)
+    try:
+        db.session.commit()
+        return jsonify({"message": "Contact updated successfully"}), 200
+    except Exception as e:
+        return (
+            jsonify({"message": "An error occurred while updating the contact", "error": str(e)}), 400
+        )
+
 
 
 if __name__ == '__main__':
