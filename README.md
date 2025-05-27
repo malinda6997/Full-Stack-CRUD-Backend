@@ -32,8 +32,11 @@ Frontend Repo (if available): _[Add link here]_
 ## 📂 Project Structure
 
 ├── config.py # DB and app configuration
+
 ├── main.py # API routes
+
 ├── models.py # SQLAlchemy models
+
 ├── requirements.txt # Python dependencies
 
 ## ⚙️ Setup Instructions
