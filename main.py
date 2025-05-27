@@ -2,13 +2,14 @@ from flask import request, jsonify
 from config import app, db
 from models import Contact
 
-
+# Get all contacts
 @app.route('/contacts', methods=['GET'])
 def get_contacts():
     contactcts = Contact.query.all()
     json_contacts = list(map(lambda contact: contact.to_json(), contactcts))
     return jsonify({"contacts":json_contacts}), 200
 
+# Create a new contact
 @app.route('/contacts', methods=['POST'])
 def create_contact():
     first_name = request.json.get('firstName')
@@ -34,8 +35,9 @@ def create_contact():
         return (
             jsonify({"message": "An error occurred while creating the contact", "error": str(e)}), 400
         )
-    
-@app.route('/contacts/<int:id>', methods=['UPDATE'])
+ 
+ #Update an existing contact   
+@app.route('/contacts/<int:id>', methods=['PUT'])
 def update_contact(id):
     contact = Contact.query.get(id)
     
@@ -53,6 +55,23 @@ def update_contact(id):
     except Exception as e:
         return (
             jsonify({"message": "An error occurred while updating the contact", "error": str(e)}), 400
+        )
+
+# Delete a contact
+@app.route('/contacts/<int:id>', methods=['DELETE'])
+def delete_contact(id):
+    contact = Contact.query.get(id)
+    
+    if not contact:
+        return jsonify({"message": "Contact not found"}), 404
+    
+    try:
+        db.session.delete(contact)
+        db.session.commit()
+        return jsonify({"message": "Contact deleted successfully"}), 200
+    except Exception as e:
+        return (
+            jsonify({"message": "An error occurred while deleting the contact", "error": str(e)}), 400
         )
 
 
