@@ -42,26 +42,28 @@ Edit
 
 ---
 
-## ⚙️ Setup Instructions
+# ⚙️ Setup Instructions
 
-### 1. Clone the Repository
+# 1. Clone the Repository
 
-```bash
 git clone https://github.com/malinda6997/Full-Stack-CRUD-Backend.git
 cd Full-Stack-CRUD-Backend
-2. Create a Virtual Environment
+
+#2. Create a Virtual Environment
 bash
 Copy
 Edit
 python -m venv venv
 source venv/bin/activate       # Linux/Mac
 venv\Scripts\activate          # Windows
-3. Install Dependencies
+
+#3. Install Dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-4. Run the Application
+
+#4. Run the Application
 bash
 Copy
 Edit
@@ -107,6 +109,5 @@ yaml
 Copy
 Edit
 
----
 
 Would you like a `requirements.txt` file generated for this project too?
