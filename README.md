@@ -66,6 +66,7 @@ PUT	/contacts/<id>	Update a contact by ID
 DELETE	/contacts/<id>	Delete a contact by ID
 
 📦 Sample JSON (for POST/PUT)
+
 json
 {
 
