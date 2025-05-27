@@ -68,15 +68,19 @@ DELETE	/contacts/<id>	Delete a contact by ID
 📦 Sample JSON (for POST/PUT)
 json
 {
+
   "firstName": "John",
+  
   "lastName": "Doe",
+  
   "mobileNumber": "0771234567",
+  
   "age": 25
+  
 }
 
 🙌 Author
 Malinda
-GitHub Profile
 
 📄 License
 This project is open-source and available under the MIT License.
